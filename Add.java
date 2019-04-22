@@ -1,0 +1,231 @@
+import javax.swing.*;  
+import java.awt.*;
+import java.awt.event.*;
+
+public class Add extends JFrame
+{
+  JFrame f;
+  JLabel l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15;
+  JTextField t1,t2,t3,t4,t5,t6,t8,t9,t10,t11,t12;
+  JTextArea t7;
+  JButton b1,b2;
+  JComboBox cb1,cb2,cb3,cb4;
+  String s1,s2,s3,s4;
+
+  Add()
+	{
+   f=new JFrame("Add");
+   f.setContentPane(new JLabel (new ImageIcon("back_ADD.jpg")));
+   l1=new JLabel(" Current Date :");  
+   l1.setBounds(30,30, 200,30);
+   l1.setFont(new Font("serif", Font.BOLD,15));
+   l2=new JLabel("Type Of Account :");
+   l2.setBounds(500,30,200,30);
+   l2.setFont(new Font("serif", Font.BOLD,15));
+   l3=new JLabel("Customer Name :");    
+   l3.setBounds(30,100, 200,30);
+   l3.setFont(new Font("serif", Font.BOLD,15));
+   l4=new JLabel("Customer Type :");
+   l4.setBounds(500,100, 200,30);
+   l4.setFont(new Font("serif", Font.BOLD,15));
+   l5=new JLabel("DOB :");
+   l5.setBounds(30,150, 200,30);
+   l5.setFont(new Font("serif", Font.BOLD,15));
+   l6=new JLabel("Gender :");
+   l6.setBounds(500,150, 200,30);
+   l6.setFont(new Font("serif", Font.BOLD,15));
+   l7=new JLabel("Marital Status :"); 
+   l7.setBounds(30,200, 200,30);
+   l7.setFont(new Font("serif", Font.BOLD,15));
+   l8=new JLabel("Email :");
+   l8.setBounds(30,260,200,30);
+   l8.setFont(new Font("serif", Font.BOLD,15));
+   l9=new JLabel("Mobile No:");
+   l9.setBounds(500,260,200,30);
+   l9.setFont(new Font("serif", Font.BOLD,15));
+   l10=new JLabel("Adress :");
+   l10.setBounds(30,310,200,30);
+   l10.setFont(new Font("serif", Font.BOLD,15));
+   l11=new JLabel("Adress Proof :");
+   l11.setBounds(30,420,200,30);
+   l11.setFont(new Font("serif", Font.BOLD,15));
+   l12=new JLabel("ID Proof :");
+   l12.setBounds(30,470,200,30);
+   l12.setFont(new Font("serif", Font.BOLD,15));
+   l13=new JLabel("ID No :");
+   l13.setBounds(500,470,200,30);
+   l13.setFont(new Font("serif", Font.BOLD,15));
+   l14=new JLabel("Nominee Name:");
+   l14.setBounds(30,520,200,30);
+   l14.setFont(new Font("serif", Font.BOLD,15));
+   l15=new JLabel("Opening Balance :");
+   l15.setBounds(500,520,200,30);
+   l15.setFont(new Font("serif", Font.BOLD,15));
+   t1=new JTextField();
+   t1.setBounds(170,30, 250,30); 
+   t2=new JTextField();
+   t2.setBounds(170,100, 250,30); 
+   t3=new JTextField("DD");
+   t3.setBounds(170,150, 30,30); 
+   t4=new JTextField("MM");
+   t4.setBounds(220,150, 30,30); 
+   t5=new JTextField("YYYY");
+   t5.setBounds(270,150, 60,30); 
+   t6=new JTextField();
+   t6.setBounds(170,260, 250,30); 
+   t7=new JTextArea();
+   t7.setBounds(170,310, 250,90);
+   t8=new JTextField();
+   t8.setBounds(625,260, 250,30);
+   t9=new JTextField();
+   t9.setBounds(170,470, 250,30);
+   t10=new JTextField();
+   t10.setBounds(625,470, 250,30);
+   t11=new JTextField();
+   t11.setBounds(170,520, 250,30);
+   t12=new JTextField();
+   t12.setBounds(625,520, 250,30);
+   b1=new JButton("Refresh");
+   b1.setBounds(250,600,120,30);
+   b1.setContentAreaFilled(false);
+   b1.setOpaque(false);
+   b1.setBorderPainted(true);
+   b2=new JButton("New");
+   b2.setBounds(498,600,120,30);
+   b2.setContentAreaFilled(false);
+   b2.setOpaque(false);
+   b2.setBorderPainted(true);
+   String s1[]={"Student","Service man","Housewife"};
+   String s2[]={"Electric Bill","Water Bill","Adhar Card"};
+   String s3[]={"VoterID Card","Adhar Card","Pan Card","Driving license"};
+   String s4[]={"Father","Mother","Daughter","Son"};
+   cb1=new JComboBox(s1);
+   cb1.setBounds(625,100,250,30);
+   cb2=new JComboBox(s2);
+   cb2.setBounds(170,420,250,30);  
+   cb3=new JComboBox(s3);
+   cb3.setBounds(170,130,250,30);
+   cb4=new JComboBox(s4);
+   cb4.setBounds(170,480,250,30);
+   
+    JRadioButton r1=new JRadioButton("Single");
+	JRadioButton r2=new JRadioButton("Married");
+	JRadioButton r3=new JRadioButton("Divorced");
+	JRadioButton r4=new JRadioButton("Widow");
+	r1.setBounds(170,200,60,30);
+	r1.setContentAreaFilled(false);
+	r1.setOpaque(false);
+	r1.setBorderPainted(false);
+	r2.setBounds(230,200,70,30);
+	r2.setContentAreaFilled(false);
+	r2.setOpaque(false);
+	r2.setBorderPainted(false);
+	r3.setBounds(300,200,90,30);
+	r3.setContentAreaFilled(false);
+	r3.setOpaque(false);
+	r3.setBorderPainted(false);
+	r4.setBounds(378,200,70,30);
+	r4.setContentAreaFilled(false);
+	r4.setOpaque(false);
+	r4.setBorderPainted(false);
+	ButtonGroup bg=new ButtonGroup();
+	bg.add(r1);bg.add(r2);bg.add(r3);bg.add(r4);
+
+
+	JRadioButton r5=new JRadioButton("Male");
+	JRadioButton r6=new JRadioButton("Female");
+	JRadioButton r7=new JRadioButton("Others");
+	r5.setBounds(630,150,60,30);
+	r5.setContentAreaFilled(false);
+	r5.setOpaque(false);
+	r5.setBorderPainted(false);
+	r6.setBounds(690,150,70,30);
+	r6.setContentAreaFilled(false);
+	r6.setOpaque(false);
+	r6.setBorderPainted(false);
+	r7.setBounds(760,150,90,30);
+	r7.setContentAreaFilled(false);
+	r7.setOpaque(false);
+	r7.setBorderPainted(false);
+	ButtonGroup bg1=new ButtonGroup();
+	bg1.add(r5);bg1.add(r6);bg1.add(r7);
+
+
+
+
+	JRadioButton r8=new JRadioButton("Current");
+	JRadioButton r9=new JRadioButton("Savings");
+	JRadioButton r0=new JRadioButton("Diposit");
+	r8.setBounds(630,30,90,30);
+	r8.setContentAreaFilled(false);
+	r8.setOpaque(false);
+	r8.setBorderPainted(false);
+	r9.setBounds(705,30,70,30);
+	r9.setContentAreaFilled(false);
+	r9.setOpaque(false);
+	r9.setBorderPainted(false);
+	r0.setBounds(778,30,90,30);
+	r0.setContentAreaFilled(false);
+	r0.setOpaque(false);
+	r0.setBorderPainted(false);
+	ButtonGroup bg2=new ButtonGroup();
+	bg2.add(r8);bg2.add(r9);bg2.add(r0);
+
+	b1.addActionListener((ActionEvent event) -> {
+            new Add();
+			});
+
+	b2.addActionListener((ActionEvent event) -> {
+			JOptionPane.showMessageDialog(f,"New Info Details have been added to Database!!!","Add",JOptionPane.PLAIN_MESSAGE);
+			});
+   f.add(l1);
+   f.add(l2);
+   f.add(l3);
+   f.add(l4);
+   f.add(l5);
+   f.add(l6);
+   f.add(l7);
+   f.add(l8);
+   f.add(l9);
+   f.add(l10);
+   f.add(l11);
+   f.add(l12);
+   f.add(l13);
+   f.add(l14);
+   f.add(l15);
+   f.add(t1);
+   f.add(t2);
+   f.add(t3);
+   f.add(t4);
+   f.add(t5);
+   f.add(t6);
+   f.add(t7);
+   f.add(t8);
+   f.add(t9);
+   f.add(t10);
+   f.add(t11);
+   f.add(t12);
+   f.add(b1);
+   f.add(b2);
+   f.add(cb1);
+   f.add(cb2);
+   f.add(r1);
+   f.add(r2);
+   f.add(r3);
+   f.add(r4);
+   f.add(r5);
+   f.add(r6);
+   f.add(r7);
+   f.add(r8);
+   f.add(r9);
+   f.add(r0);
+   f.setSize(923,700);
+   f.setLocationRelativeTo(null);
+   f.setLayout(null);  
+   f.setVisible(true);  
+    }
+	public static void main(String[] args)
+	{
+		new Add();
+	}
+}
